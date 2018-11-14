@@ -6,6 +6,9 @@
       <li>Add two links to the /products page. The links should go to /products/1 and /products/2</li>
       <li>Output the product id on the /products/:pid page</li>
     </ol>
+    <div>
+      <button @click="goToProductPage">Go to Product Page</button>
+    </div>
   </section>
 </template>
 
@@ -15,6 +18,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  methods: {
+    goToProductPage() {
+      this.$router.push('/products');
+    }
   }
 }
 </script>
@@ -27,6 +35,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-flow: column wrap;
 }
 .title
 {
